@@ -16,25 +16,35 @@ app.use((req,res,next)=>{
   
 })
 
-/**app.get('/',(req,res)=>{
-    console.log(configfun.idGen(crypto))
-    res.send('hello')
-})**/
-
 app.post('/postreview',(req,res)=>{
-    
-    
-    req.body.payL['id']['mid']=configfun.idGen(crypto)
     
     let dataObj=JSON.
         parse(fileR.readFileSync('./data.json'))
-    dataObj['data']
-        .push(req.body.payL)
+    let flagObj=configfun.
+        searchFl(dataObj,req.body.payL,'id','imdb')
     
+    if(flagObj.flag==true){
+        console.log('exist'+flagObj.index)
+        req.body.payL['id']['mid']=dataObj['data'][flagObj.index]['id']['mid']
+        dataObj['data'][flagObj.index]=req.body.payL  
+    }        
+    else{
+        console.log('doesnt exist')
+        req.body.payL['id']['mid']=configfun.idGen(crypto)
+        dataObj['data'].push(req.body.payL)
+    }
+        
     let data=JSON.stringify(dataObj,null,4)
     fileR.writeFileSync('./data.json',data)
     
     res.json({status:true})
+})
+
+app.get('/getAll',(req,res)=>{
+    let dataObj=JSON.
+        parse(fileR.readFileSync('./data.json'))
+    res.send(dataObj['data'])
+
 })
 
 const listener=app.listen(8001,()=>{

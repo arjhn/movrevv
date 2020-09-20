@@ -17,10 +17,18 @@ const writeFile=(fileR,fp,data)=>{
     })
 }
 
-const beautify=(data)=>{
-    let datastr=JSON.stringify(data).replace(/{/g,"\n \t { \n \t \t")
-    datastr=datastr.replace(/}/g,"\n \t  }")
-    return datastr
+const searchFl=(finData,reqData,key1,key2)=>{
+    
+    let flagB=false
+    let ind=-1
+    finData["data"].map((elem,index)=>{
+        if(elem[key1][key2]==reqData[key1][key2]){
+            flagB=true
+            ind=index
+            console.log(elem[key1][key2]+ '- ' +reqData[key1][key2] )
+        }
+    })
+    return {flag:flagB,index:ind}
 }
 
 const idGen=(crypto)=>{
@@ -33,5 +41,6 @@ const idGen=(crypto)=>{
 module.exports={
     readFile:readFile,
     writeFile:writeFile,
-    idGen:idGen
+    idGen:idGen,
+    searchFl:searchFl
 }
