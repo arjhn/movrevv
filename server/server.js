@@ -43,7 +43,7 @@ app.post('/postreview',(req,res)=>{
 app.get('/getAll',(req,res)=>{
     let dataObj=JSON.
         parse(fileR.readFileSync('./data.json'))
-    console.log('jasdkaads')
+        console.log('adjajdka')
     res.send(dataObj['data'])
 
 })
