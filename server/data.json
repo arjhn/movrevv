@@ -44,6 +44,66 @@
             "review": "A break from the routine movies, it is a fun take on the villains. It humanizes all the villains.",
             "language": "English",
             "overview": "Wreck-It Ralph is the 9-foot-tall, 643-pound villain of an arcade video game named Fix-It Felix Jr., in which the game's titular hero fixes buildings that Ralph destroys. Wanting to prove he can be a good guy and not just a villain, Ralph escapes his game and lands in Hero's Duty, a first-person shooter where he helps the game's hero battle against alien invaders. He later enters Sugar Rush, a kart racing game set on tracks made of candies, cookies and other sweets. There, Ralph meets Vanellope von Schweetz who has learned that her game is faced with a dire threat that could affect the entire arcade, and one that Ralph may have inadvertently started."
+        },
+        {
+            "id": {
+                "tmdb": "54639",
+                "imdb": "tt1773109",
+                "mid": "c7b8a4998e2dc14dbb7157716bd9b423e355a67f1c62cbc3d1531ca232f85029"
+            },
+            "title": "Yamla Pagla Deewana",
+            "category": "movie",
+            "release_date": "2011-01-14",
+            "tagline": "",
+            "poster": "/vIR7kZhz8xQAUYg53R9ePbbC4GY.jpg",
+            "review": "The Deol Trio's best film ever. LOL",
+            "language": "Hindi",
+            "overview": "Dharmendra and Bobby play a crooked father-son pair based in Varanasi. Sunny plays a Canada based upright man who gets to know after two decades that he has a father and brother in Varanasi. The film is about Sunny's journey to his past."
+        },
+        {
+            "id": {
+                "tmdb": "498860",
+                "imdb": "tt2066171",
+                "mid": "41ae2c859e6800b37644ced74f8f4ab4c3e88c7bf126d02165e097198fac2de6"
+            },
+            "title": "Yu-Gi-Oh! 3D: Bonds Beyond Time Abridged",
+            "category": "movie",
+            "release_date": "2011-11-06",
+            "tagline": "",
+            "poster": "/qlK2XYm35yzK2amX49UXiVbGKGe.jpg",
+            "review": ".hadkladlakdlkaldkadlkadlkda andakdsdjasjd adsd ",
+            "language": "English",
+            "overview": "Yugi, Jaden and Yusei must travel through time and team up to save a children's card game."
+        },
+        {
+            "id": {
+                "tmdb": "565179",
+                "imdb": "tt7278824",
+                "mid": "8335caf676d20f87586e49b191148f8322c507f7fe6845ee11026dfe8a8529da"
+            },
+            "title": "The First King",
+            "category": "movie",
+            "release_date": "2019-01-31",
+            "tagline": "",
+            "poster": "/yO3749nMhVrPW2uzKZkkaKNfXvD.jpg",
+            "review": "this is a text in <b>bold</b>\nthis is new line",
+            "language": "Latin",
+            "overview": "Romulus and Remus, two shepherds and loyal brothers, end up taking part to a journey that will lead one of them to be the founder of the greatest nation ever seen. However, the fate of the chosen one will pass from killing his own brother."
+        },
+        {
+            "id": {
+                "tmdb": "419704",
+                "imdb": "tt2935510",
+                "mid": "0027d9d556aeb5623839292ee96f92bd7278b5c0c6b3b261d3ef176d78b2e2b9"
+            },
+            "title": "Ad Astra",
+            "category": "movie",
+            "release_date": "2019-09-17",
+            "tagline": "The answers we seek are just outside our reach",
+            "poster": "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg",
+            "review": "This is a bold sentence.\n</br>this is a new line",
+            "language": "English",
+            "overview": "The near future, a time when both hope and hardships drive humanity to look to the stars and beyond. While a mysterious phenomenon menaces to destroy life on planet Earth, astronaut Roy McBride undertakes a mission across the immensity of space and its many perils to uncover the truth about a lost expedition that decades before boldly faced emptiness and silence in search of the unknown."
         }
     ]
 }

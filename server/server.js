@@ -1,7 +1,9 @@
-const express=require('express');
-const bodyParser=require('body-parser');
-const crypto=require('crypto');
-const fileR=require('fs');
+const express=require('express'),
+    bodyParser=require('body-parser'),
+    crypto=require('crypto'),
+    fileR=require('fs'),
+    multer=require('multer'),
+    cors=require('cors');
 
 const configfun=require('./configfun')
 
@@ -43,7 +45,6 @@ app.post('/postreview',(req,res)=>{
 app.get('/getAll',(req,res)=>{
     let dataObj=JSON.
         parse(fileR.readFileSync('./data.json'))
-        console.log('adjaadadajdkadadaa')
     res.send(dataObj['data'])
 
 })
