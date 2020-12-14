@@ -3,13 +3,31 @@ const express=require('express'),
     crypto=require('crypto'),
     fileR=require('fs'),
     multer=require('multer'),
-    cors=require('cors');
+    cors=require('cors'),
+    path=require('path');
+
+const PATH='./uploads';
+
+let storage=multer.diskStorage({
+    destination:(req,file,cb)=>{
+        cb(null,PATH)
+    },
+    filename:(req,file,cb)=>{
+        cb(null,file.fieldname+' - '+Date.now())
+    }
+})
+
+let upload=multer({
+    storage:storage
+})
 
 const configfun=require('./configfun')
 
 const app=express();
+//app.use(cors)
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
+
 app.use((req,res,next)=>{
 
     res.header("Access-Control-Allow-Origin", "*");
@@ -48,6 +66,21 @@ app.get('/getAll',(req,res)=>{
     res.send(dataObj['data'])
 
 })
+
+app.post('/api/upload', upload.single('image'), function (req, res) {
+    if (!req.file) {
+      console.log("No file is available!");
+      return res.send({
+        success: false
+      });
+  
+    } else {
+      console.log('File is available!');
+      return res.send({
+        success: true
+      })
+    }
+  });
 
 const listener=app.listen(8001,()=>{
     console.log('App is starting')
